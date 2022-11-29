@@ -8,6 +8,7 @@ import { Section } from 'components/Section/Section';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
+import { Loader } from 'components/Loader/Loader';
 
 export function App() {
   const dispatch = useDispatch();
@@ -25,10 +26,9 @@ export function App() {
       </Section>
       <Section title="Contacts">
         <Filter />
-        {isLoading && <b>Request in progress...</b>}
-        {error && <b>{error}</b>}
         <ContactList />
       </Section>
+      {isLoading && !error && <Loader />}
     </Container>
   );
 }
