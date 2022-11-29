@@ -1,7 +1,7 @@
 import { Formik, ErrorMessage } from 'formik';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 import * as yup from 'yup';
 import { FormWrap, FieldWrap } from './ContactForm.styled';
